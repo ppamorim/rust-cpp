@@ -16,5 +16,6 @@ pub fn foo() {
             return r;
         })
     };
-    assert_eq!(r, 4)
+    assert_eq!(r, 4);
+    println!("R: {}", r);
 }
