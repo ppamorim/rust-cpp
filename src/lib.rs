@@ -3,6 +3,7 @@ extern crate cpp;
 
 cpp!{{
     #include <iostream>
+    #include "sum.h"
 }}
 
 pub fn foo() {
@@ -11,8 +12,9 @@ pub fn foo() {
     let r = unsafe {
         cpp!([name_ptr as "const char *"] -> u32 as "int32_t" {
             std::cout << "Hello, " << name_ptr << std::endl;
-            return 42;
+            int r = sum(3);
+            return r;
         })
     };
-    assert_eq!(r, 42)
+    assert_eq!(r, 4)
 }

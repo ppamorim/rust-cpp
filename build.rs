@@ -1,4 +1,4 @@
-extern crate cpp_build;
+// extern crate cpp_build;
 
 fn main() {
     let include_path = "/Users/ppamorim/Repository/rust-cpp/src/lib";
